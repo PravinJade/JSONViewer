@@ -1,0 +1,807 @@
+[{
+		"run_id": "5c790b39b3cb1f0030c7138b",
+		"pipeline_id": "5c77c84fb9d821002e86d55a",
+		"version_id": "1",
+		"project": "P000005",
+		"submitted_by": "steve",
+		"submission_time": 1551436601624,
+		"end_time": 1551436614407,
+		"attributes": [{
+				"model_id": "5c77bc96b9d821002e86d4f8",
+				"version_id": "latest",
+				"training_args": {
+					"START_FIT_DATE": 201306,
+					"END_FIT_DATE": 201602
+				},
+				"training_input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"],
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}, {
+				"step_id": "5c77be6fb9d821002e86d4fd",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}, {
+				"step_id": "5c77bf10b9d821002e86d501",
+				"args": {
+					"KPI threshold": 60
+				},
+				"input_resources": null
+			}, {
+				"model_id": "5c77c1c8b9d821002e86d559",
+				"version_id": "latest",
+				"training_args": {},
+				"training_input_resources": null,
+				"args": {},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}
+		],
+		"run_status": "SUCCESS",
+		"run_results": [{
+				"model_id": "5c77bc96b9d821002e86d4f8",
+				"version_id": "5",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"training": false,
+				"model_status": "SUCCESS",
+				"model_result": {
+					"job_id": "5c790b39b3cb1f0030c7138d",
+					"submission_time": 1551436602960,
+					"start_time": 1551436601847,
+					"end_time": 1551436605032,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 1 day(s)", "/usr/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.", "  from numpy.core.umath_tests import inner1d", "/tmp/1708160f-4b8a-4bb3-a36b-e312ad911dda5370481613368384760/recipe62a1cc1d-7cc4-4831-a243-c87a79e4a3fc.py:53: FutureWarning: Method .as_matrix will be removed in a future version. Use .values instead.", "  y_test = test_data['Volume'].as_matrix()", "/tmp/1708160f-4b8a-4bb3-a36b-e312ad911dda5370481613368384760/recipe62a1cc1d-7cc4-4831-a243-c87a79e4a3fc.py:97: FutureWarning: from_items is deprecated. Please use DataFrame.from_dict(dict(items), ...) instead. DataFrame.from_dict(OrderedDict(items)) may be used to preserve the key order.", "  df = pd.DataFrame.from_items(lists)", "      Date     Forecast", "0   201512  4417.600163", "1   201601  1393.191379", "2   201602  4336.780991", "3   201603  4079.726261", "4   201604  1677.203962", "5   201605  3569.055107", "6   201606  2294.127754", "7   201607  4338.564831", "8   201608  2892.478890", "9   201609  2783.059505", "10  201610  4358.047576", "11  201611  3614.367008", "12  201612  4725.835877"],
+					"generated_output": [{
+							"resource_id": "5c790b3db3cb1f0030c7138e"
+						}
+					]
+				}
+			}, {
+				"step_id": "5c77be6fb9d821002e86d4fd",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"step_status": "SUCCESS",
+				"step_result": {
+					"job_id": "5c790b3db3cb1f0030c71391",
+					"submission_time": 1551436606224,
+					"start_time": 1551436605137,
+					"end_time": 1551436607792,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 1 day(s)", "MAPE value is: 38.63054582618555"]
+				}
+			}, {
+				"step_id": "5c77bf10b9d821002e86d501",
+				"args": {
+					"KPI threshold": 60
+				},
+				"step_status": "SUCCESS",
+				"step_result": {
+					"job_id": "5c790b3fb3cb1f0030c71394",
+					"submission_time": 1551436609043,
+					"start_time": 1551436607914,
+					"end_time": 1551436609333,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 1 day(s)"],
+					"success": [{
+							"model_id": "5c77bc96b9d821002e86d4f8",
+							"version_id": "5",
+							"training_args": {
+								"START_FIT_DATE": "201306",
+								"END_FIT_DATE": "201602"
+							},
+							"training": true,
+							"model_status": "SUCCESS",
+							"model_result": {
+								"job_id": "5c790b41b3cb1f0030c71396",
+								"submission_time": 1551436610692,
+								"start_time": 1551436609605,
+								"end_time": 1551436614407,
+								"job_server_instance": "d4f861fd6b63:4567",
+								"environment_id": null,
+								"messages": ["Warning: License is expiring in 1 day(s)", "/usr/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.", "  from numpy.core.umath_tests import inner1d", "The Machine Learning Forecasting model has been successfully trained."]
+							}
+						}
+					],
+					"failure": [{
+							"model_id": "5c77c1c8b9d821002e86d559",
+							"version_id": "latest",
+							"args": null,
+							"training": false,
+							"model_status": "NOT_EXECUTED",
+							"model_result": {
+								"job_id": null,
+								"submission_time": null,
+								"start_time": null,
+								"end_time": null,
+								"job_server_instance": null,
+								"environment_id": null,
+								"messages": null
+							}
+						}
+					]
+				}
+			}
+		]
+	}, {
+		"run_id": "5c790a6fb3cb1f0030c7137d",
+		"pipeline_id": "5c77c84fb9d821002e86d55a",
+		"version_id": "1",
+		"project": "P000005",
+		"submitted_by": "steve",
+		"submission_time": 1551436399829,
+		"end_time": 1551436414331,
+		"attributes": [{
+				"model_id": "5c77bc96b9d821002e86d4f8",
+				"version_id": "latest",
+				"training_args": {
+					"START_FIT_DATE": 201306,
+					"END_FIT_DATE": 201602
+				},
+				"training_input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"],
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}, {
+				"step_id": "5c77be6fb9d821002e86d4fd",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}, {
+				"step_id": "5c77bf10b9d821002e86d501",
+				"args": {
+					"KPI threshold": 60
+				},
+				"input_resources": null
+			}, {
+				"model_id": "5c77c1c8b9d821002e86d559",
+				"version_id": "latest",
+				"training_args": {},
+				"training_input_resources": null,
+				"args": {},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}
+		],
+		"run_status": "SUCCESS",
+		"run_results": [{
+				"model_id": "5c77bc96b9d821002e86d4f8",
+				"version_id": "4",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"training": false,
+				"model_status": "SUCCESS",
+				"model_result": {
+					"job_id": "5c790a70b3cb1f0030c7137f",
+					"submission_time": 1551436401339,
+					"start_time": 1551436400207,
+					"end_time": 1551436404986,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 1 day(s)", "/usr/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.", "  from numpy.core.umath_tests import inner1d", "/tmp/1b8b6cc2-da12-4b15-a7ee-da558fda98531114525868806938433/recipe11293179-8be1-4ad6-9da7-7d082a3d65c2.py:53: FutureWarning: Method .as_matrix will be removed in a future version. Use .values instead.", "  y_test = test_data['Volume'].as_matrix()", "/tmp/1b8b6cc2-da12-4b15-a7ee-da558fda98531114525868806938433/recipe11293179-8be1-4ad6-9da7-7d082a3d65c2.py:97: FutureWarning: from_items is deprecated. Please use DataFrame.from_dict(dict(items), ...) instead. DataFrame.from_dict(OrderedDict(items)) may be used to preserve the key order.", "  df = pd.DataFrame.from_items(lists)", "      Date     Forecast", "0   201512  3619.920722", "1   201601  1762.940482", "2   201602  4330.275391", "3   201603  3382.537782", "4   201604  2599.650587", "5   201605  4255.471174", "6   201606  4780.092345", "7   201607  3049.845308", "8   201608  3342.365598", "9   201609  3659.456652", "10  201610  3636.917151", "11  201611  3655.255349", "12  201612  3619.920722"],
+					"generated_output": [{
+							"resource_id": "5c790a75b3cb1f0030c71380"
+						}
+					]
+				}
+			}, {
+				"step_id": "5c77be6fb9d821002e86d4fd",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"step_status": "SUCCESS",
+				"step_result": {
+					"job_id": "5c790a75b3cb1f0030c71383",
+					"submission_time": 1551436406273,
+					"start_time": 1551436405147,
+					"end_time": 1551436408007,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 1 day(s)", "MAPE value is: 45.47802720489335"]
+				}
+			}, {
+				"step_id": "5c77bf10b9d821002e86d501",
+				"args": {
+					"KPI threshold": 60
+				},
+				"step_status": "SUCCESS",
+				"step_result": {
+					"job_id": "5c790a78b3cb1f0030c71386",
+					"submission_time": 1551436409294,
+					"start_time": 1551436408131,
+					"end_time": 1551436409522,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 1 day(s)"],
+					"success": [{
+							"model_id": "5c77bc96b9d821002e86d4f8",
+							"version_id": "4",
+							"training_args": {
+								"START_FIT_DATE": "201306",
+								"END_FIT_DATE": "201602"
+							},
+							"training": true,
+							"model_status": "SUCCESS",
+							"model_result": {
+								"job_id": "5c790a79b3cb1f0030c71388",
+								"submission_time": 1551436410718,
+								"start_time": 1551436409631,
+								"end_time": 1551436414331,
+								"job_server_instance": "d4f861fd6b63:4567",
+								"environment_id": null,
+								"messages": ["Warning: License is expiring in 1 day(s)", "/usr/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.", "  from numpy.core.umath_tests import inner1d", "The Machine Learning Forecasting model has been successfully trained."]
+							}
+						}
+					],
+					"failure": [{
+							"model_id": "5c77c1c8b9d821002e86d559",
+							"version_id": "latest",
+							"args": null,
+							"training": false,
+							"model_status": "NOT_EXECUTED",
+							"model_result": {
+								"job_id": null,
+								"submission_time": null,
+								"start_time": null,
+								"end_time": null,
+								"job_server_instance": null,
+								"environment_id": null,
+								"messages": null
+							}
+						}
+					]
+				}
+			}
+		]
+	}, {
+		"run_id": "5c77cebeb9d821002e86d60c",
+		"pipeline_id": "5c77c84fb9d821002e86d55a",
+		"version_id": "1",
+		"project": "P000005",
+		"submitted_by": "steve",
+		"submission_time": 1551355582851,
+		"end_time": 1551361305936,
+		"attributes": [{
+				"model_id": "5c77bc96b9d821002e86d4f8",
+				"version_id": "latest",
+				"training_args": {
+					"START_FIT_DATE": 201306,
+					"END_FIT_DATE": 201602
+				},
+				"training_input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"],
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}, {
+				"step_id": "5c77be6fb9d821002e86d4fd",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}, {
+				"step_id": "5c77bf10b9d821002e86d501",
+				"args": {
+					"KPI threshold": 60
+				},
+				"input_resources": null
+			}, {
+				"model_id": "5c77c1c8b9d821002e86d559",
+				"version_id": "latest",
+				"training_args": {},
+				"training_input_resources": null,
+				"args": {},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}
+		],
+		"run_status": "ERROR",
+		"run_results": [{
+				"model_id": "5c77bc96b9d821002e86d4f8",
+				"version_id": "4",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"training": false,
+				"model_status": "SUCCESS",
+				"model_result": {
+					"job_id": "5c77cebeb9d821002e86d60e",
+					"submission_time": 1551355584101,
+					"start_time": 1551355582969,
+					"end_time": 1551361242356,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 2 day(s)", "/usr/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.", "  from numpy.core.umath_tests import inner1d", "/tmp/fb488c4a-354e-4d7a-a089-d52ec47cecca7910996068620122526/recipe85052057-a081-46fd-8af8-0acb6c5e92d9.py:53: FutureWarning: Method .as_matrix will be removed in a future version. Use .values instead.", "  y_test = test_data['Volume'].as_matrix()", "/tmp/fb488c4a-354e-4d7a-a089-d52ec47cecca7910996068620122526/recipe85052057-a081-46fd-8af8-0acb6c5e92d9.py:97: FutureWarning: from_items is deprecated. Please use DataFrame.from_dict(dict(items), ...) instead. DataFrame.from_dict(OrderedDict(items)) may be used to preserve the key order.", "  df = pd.DataFrame.from_items(lists)", "      Date     Forecast", "0   201512  3619.920722", "1   201601  1762.940482", "2   201602  4330.275391", "3   201603  3382.537782", "4   201604  2599.650587", "5   201605  4255.471174", "6   201606  4780.092345", "7   201607  3049.845308", "8   201608  3342.365598", "9   201609  3659.456652", "10  201610  3636.917151", "11  201611  3655.255349", "12  201612  3619.920722"],
+					"generated_output": [{
+							"resource_id": "5c77e4dab9d821002e86d60f"
+						}
+					]
+				}
+			}, {
+				"step_id": "5c77be6fb9d821002e86d4fd",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"step_status": "SUCCESS",
+				"step_result": {
+					"job_id": "5c77e4dbb9d821002e86d612",
+					"submission_time": 1551361247242,
+					"start_time": 1551361243568,
+					"end_time": 1551361249725,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 2 day(s)", "MAPE value is: 45.47802720489336"]
+				}
+			}, {
+				"step_id": "5c77bf10b9d821002e86d501",
+				"args": {
+					"KPI threshold": 60
+				},
+				"step_status": "SUCCESS",
+				"step_result": {
+					"job_id": "5c77e4e1b9d821002e86d615",
+					"submission_time": 1551361250918,
+					"start_time": 1551361249855,
+					"end_time": 1551361251347,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 2 day(s)"],
+					"success": [{
+							"model_id": "5c77bc96b9d821002e86d4f8",
+							"version_id": "4",
+							"training_args": {
+								"START_FIT_DATE": "201306",
+								"END_FIT_DATE": "201602"
+							},
+							"training": true,
+							"model_status": "ERROR",
+							"model_result": {
+								"job_id": "5c77e4e3b9d821002e86d617",
+								"submission_time": 1551361252625,
+								"start_time": 1551361251500,
+								"end_time": 1551361305936,
+								"job_server_instance": "d4f861fd6b63:4567",
+								"environment_id": null,
+								"messages": ["Warning: License is expiring in 2 day(s)", "/usr/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.", "  from numpy.core.umath_tests import inner1d", "Traceback (most recent call last):", "  File \"/tmp/6b6969e0-08c1-416c-b3db-d8f888b63a457250918098898257816/recipe97d8ecda-e39e-483f-8a71-bc5c71a3aca3.py\", line 82, in <module>", "    mm.newVersion(modelBinary)", "  File \"/usr/lib/python3.6/site-packages/mmlibrary/__init__.py\", line 157, in newVersion", "    metadata={\"jobId\": getJobId(), \"name\": modelBinaryName, \"modelBinary\": \"true\"})", "  File \"/usr/lib/python3.6/site-packages/gridfs/__init__.py\", line 612, in upload_from_stream", "    gin.write(source)", "  File \"/usr/lib/python3.6/site-packages/gridfs/grid_file.py\", line 369, in write", "    self.__flush_data(to_write)", "  File \"/usr/lib/python3.6/site-packages/gridfs/grid_file.py\", line 258, in __flush_data", "    self.__ensure_indexes()", "  File \"/usr/lib/python3.6/site-packages/gridfs/grid_file.py\", line 201, in __ensure_indexes", "    self.__create_index(self._coll.files, _F_INDEX, False)", "  File \"/usr/lib/python3.6/site-packages/gridfs/grid_file.py\", line 188, in __create_index", "    doc = collection.find_one(projection={\"_id\": 1}, session=self._session)", "  File \"/usr/lib/python3.6/site-packages/pymongo/collection.py\", line 1262, in find_one", "    for result in cursor.limit(-1):", "  File \"/usr/lib/python3.6/site-packages/pymongo/cursor.py\", line 1189, in next", "    if len(self.__data) or self._refresh():", "  File \"/usr/lib/python3.6/site-packages/pymongo/cursor.py\", line 1087, in _refresh", "    self.__session = self.__collection.database.client._ensure_session()", "  File \"/usr/lib/python3.6/site-packages/pymongo/mongo_client.py\", line 1563, in _ensure_session", "    return self.__start_session(True, causal_consistency=False)", "  File \"/usr/lib/python3.6/site-packages/pymongo/mongo_client.py\", line 1516, in __start_session", "    server_session = self._get_server_session()", "  File \"/usr/lib/python3.6/site-packages/pymongo/mongo_client.py\", line 1549, in _get_server_session", "    return self._topology.get_server_session()", "  File \"/usr/lib/python3.6/site-packages/pymongo/topology.py\", line 432, in get_server_session", "    None)", "  File \"/usr/lib/python3.6/site-packages/pymongo/topology.py\", line 199, in _select_servers_loop", "    self._error_message(selector))", "pymongo.errors.ServerSelectionTimeoutError: mongo:27017: timed out"]
+							}
+						}
+					],
+					"failure": [{
+							"model_id": "5c77c1c8b9d821002e86d559",
+							"version_id": "latest",
+							"args": null,
+							"training": false,
+							"model_status": "NOT_EXECUTED",
+							"model_result": {
+								"job_id": null,
+								"submission_time": null,
+								"start_time": null,
+								"end_time": null,
+								"job_server_instance": null,
+								"environment_id": null,
+								"messages": null
+							}
+						}
+					]
+				}
+			}
+		]
+	}, {
+		"run_id": "5c77cdcbb9d821002e86d5ae",
+		"pipeline_id": "5c77c84fb9d821002e86d55a",
+		"version_id": "1",
+		"project": "P000005",
+		"submitted_by": "steve",
+		"submission_time": 1551355339581,
+		"end_time": 1551355348114,
+		"attributes": [{
+				"model_id": "5c77bc96b9d821002e86d4f8",
+				"version_id": "latest",
+				"training_args": {
+					"START_FIT_DATE": 201306,
+					"END_FIT_DATE": 201602
+				},
+				"training_input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"],
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}, {
+				"step_id": "5c77be6fb9d821002e86d4fd",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}, {
+				"step_id": "5c77bf10b9d821002e86d501",
+				"args": {
+					"KPI threshold": 60
+				},
+				"input_resources": null
+			}, {
+				"model_id": "5c77c1c8b9d821002e86d559",
+				"version_id": "latest",
+				"training_args": {},
+				"training_input_resources": null,
+				"args": {},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}
+		],
+		"run_status": "ERROR",
+		"run_results": [{
+				"model_id": "5c77bc96b9d821002e86d4f8",
+				"version_id": "3",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"training": false,
+				"model_status": "SUCCESS",
+				"model_result": {
+					"job_id": "5c77cdcbb9d821002e86d5b0",
+					"submission_time": 1551355340745,
+					"start_time": 1551355339683,
+					"end_time": 1551355343511,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 2 day(s)", "/usr/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.", "  from numpy.core.umath_tests import inner1d", "/tmp/e11461d4-9b75-4460-970f-92b833a5ad24601572794350797181/recipe65debb8c-08c9-4229-a5c4-519b9960a08e.py:53: FutureWarning: Method .as_matrix will be removed in a future version. Use .values instead.", "  y_test = test_data['Volume'].as_matrix()", "/tmp/e11461d4-9b75-4460-970f-92b833a5ad24601572794350797181/recipe65debb8c-08c9-4229-a5c4-519b9960a08e.py:97: FutureWarning: from_items is deprecated. Please use DataFrame.from_dict(dict(items), ...) instead. DataFrame.from_dict(OrderedDict(items)) may be used to preserve the key order.", "  df = pd.DataFrame.from_items(lists)", "      Date     Forecast", "0   201512  3619.920722", "1   201601  1762.940482", "2   201602  4330.275391", "3   201603  3382.537782", "4   201604  2599.650587", "5   201605  4255.471174", "6   201606  4780.092345", "7   201607  3049.845308", "8   201608  3342.365598", "9   201609  3659.456652", "10  201610  3636.917151", "11  201611  3655.255349", "12  201612  3619.920722"],
+					"generated_output": [{
+							"resource_id": "5c77cdcfb9d821002e86d5b1"
+						}
+					]
+				}
+			}, {
+				"step_id": "5c77be6fb9d821002e86d4fd",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"step_status": "SUCCESS",
+				"step_result": {
+					"job_id": "5c77cdcfb9d821002e86d5b4",
+					"submission_time": 1551355344690,
+					"start_time": 1551355343622,
+					"end_time": 1551355346467,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 2 day(s)", "MAPE value is: 45.47802720489336"]
+				}
+			}, {
+				"step_id": "5c77bf10b9d821002e86d501",
+				"args": {
+					"KPI threshold": 60
+				},
+				"step_status": "SUCCESS",
+				"step_result": {
+					"job_id": "5c77cdd2b9d821002e86d5b7",
+					"submission_time": 1551355347782,
+					"start_time": 1551355346708,
+					"end_time": 1551355348031,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 2 day(s)"],
+					"success": [{
+							"model_id": "5c77bc96b9d821002e86d4f8",
+							"version_id": "3",
+							"training_args": {
+								"START_FIT_DATE": "201306",
+								"END_FIT_DATE": "201602"
+							},
+							"training": true,
+							"model_status": "ERROR",
+							"model_result": {
+								"job_id": null,
+								"submission_time": null,
+								"start_time": 1551355348114,
+								"end_time": 1551355348114,
+								"job_server_instance": null,
+								"environment_id": null,
+								"messages": ["Unable to train model: resource not available for version or it has been deleted: 3"]
+							}
+						}
+					],
+					"failure": [{
+							"model_id": "5c77c1c8b9d821002e86d559",
+							"version_id": "latest",
+							"args": null,
+							"training": false,
+							"model_status": "NOT_EXECUTED",
+							"model_result": {
+								"job_id": null,
+								"submission_time": null,
+								"start_time": null,
+								"end_time": null,
+								"job_server_instance": null,
+								"environment_id": null,
+								"messages": null
+							}
+						}
+					]
+				}
+			}
+		]
+	}, {
+		"run_id": "5c77c986b9d821002e86d55b",
+		"pipeline_id": "5c77c84fb9d821002e86d55a",
+		"version_id": "1",
+		"project": "P000005",
+		"submitted_by": "steve",
+		"submission_time": 1551354246455,
+		"end_time": 1551354249665,
+		"attributes": [{
+				"model_id": "5c77bc96b9d821002e86d4f8",
+				"version_id": "latest",
+				"training_args": {
+					"START_FIT_DATE": "201306",
+					"END_FIT_DATE": "201602"
+				},
+				"training_input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"],
+				"args": {
+					"END_FORECAST_DATE": "201612",
+					"START_FORECAST_DATE": "201512",
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}, {
+				"step_id": "5c77be6fb9d821002e86d4fd",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}, {
+				"step_id": "5c77bf10b9d821002e86d501",
+				"args": {
+					"KPI threshold": 60
+				},
+				"input_resources": null
+			}, {
+				"model_id": "5c77c1c8b9d821002e86d559",
+				"version_id": "latest",
+				"training_args": {},
+				"training_input_resources": null,
+				"args": {},
+				"input_resources": ["5c76460ab9d821002e86d49b", "5c764674b9d821002e86d4a5"]
+			}
+		],
+		"run_status": "ERROR",
+		"run_results": [{
+				"model_id": "5c77bc96b9d821002e86d4f8",
+				"version_id": "2",
+				"args": {
+					"END_FORECAST_DATE": "201612",
+					"START_FORECAST_DATE": "201512",
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"training": false,
+				"model_status": "ERROR",
+				"model_result": {
+					"job_id": "5c77c986b9d821002e86d55d",
+					"submission_time": 1551354247712,
+					"start_time": 1551354246636,
+					"end_time": 1551354249665,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 2 day(s)", "Traceback (most recent call last):", "  File \"/tmp/d0cf50b7-de0d-4318-8fbf-02da12858baf9008484988469738845/recipe58bd891e-f135-452c-8856-43209970ccc1.py\", line 71, in <module>", "    time_series = time_series[time_series['Date'] >= START_FORECAST_DATE].copy()", "  File \"/usr/lib/python3.6/site-packages/pandas/core/ops.py\", line 1283, in wrapper", "    res = na_op(values, other)", "  File \"/usr/lib/python3.6/site-packages/pandas/core/ops.py\", line 1169, in na_op", "    raise TypeError(\"invalid type comparison\")", "TypeError: invalid type comparison"]
+				}
+			}, {
+				"step_id": "5c77be6fb9d821002e86d4fd",
+				"args": {
+					"END_FORECAST_DATE": 201612,
+					"START_FORECAST_DATE": 201512,
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001"
+				},
+				"step_status": "NOT_EXECUTED",
+				"step_result": null
+			}, {
+				"step_id": "5c77bf10b9d821002e86d501",
+				"args": {
+					"KPI threshold": 60
+				},
+				"step_status": "NOT_EXECUTED",
+				"step_result": null
+			}
+		]
+	}, {
+		"run_id": "5c52fe7fb9d821002e86d335",
+		"pipeline_id": "5c52fd5cb9d821002e86d334",
+		"version_id": "1",
+		"project": "default-project",
+		"submitted_by": "Model Engineer User",
+		"submission_time": 1548942975520,
+		"end_time": 1548942983290,
+		"attributes": [{
+				"model_id": "5c52c80fb9d821002e86d21d",
+				"version_id": "latest",
+				"training_args": {},
+				"training_input_resources": null,
+				"args": {},
+				"input_resources": ["5c52bb62b9d821002e86d16f"]
+			}, {
+				"step_id": "5c52d605b9d821002e86d223",
+				"args": {
+					"KPI threshold": 60
+				},
+				"input_resources": null
+			}, {
+				"model_id": "5c52c80fb9d821002e86d21d",
+				"version_id": "latest",
+				"training_args": {},
+				"training_input_resources": ["5c52bb62b9d821002e86d16f"],
+				"args": {},
+				"input_resources": null
+			}, {
+				"model_id": "5c52fbf7b9d821002e86d333",
+				"version_id": "1",
+				"training_args": {},
+				"training_input_resources": null,
+				"args": {},
+				"input_resources": ["5c52bb62b9d821002e86d16f"]
+			}
+		],
+		"run_status": "ERROR",
+		"run_results": [{
+				"model_id": "5c52c80fb9d821002e86d21d",
+				"version_id": "3",
+				"args": {
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001",
+					"START_FORECAST_DATE": 201512,
+					"END_FORECAST_DATE": 201612
+				},
+				"training": false,
+				"model_status": "SUCCESS",
+				"model_result": {
+					"job_id": "5c52fe7fb9d821002e86d337",
+					"submission_time": 1548942976670,
+					"start_time": 1548942975604,
+					"end_time": 1548942979816,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 30 day(s)", "/usr/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.", "  from numpy.core.umath_tests import inner1d", "/tmp/4c36e792-0515-4740-8326-db58715319814351211781766178120/Module.py:105: FutureWarning: Method .as_matrix will be removed in a future version. Use .values instead.", "  y_test = test_data['Volume'].as_matrix()", "/tmp/4c36e792-0515-4740-8326-db58715319814351211781766178120/recipe4dd46106-9e7f-4eb8-852d-42977b693096.py:50: FutureWarning: from_items is deprecated. Please use DataFrame.from_dict(dict(items), ...) instead. DataFrame.from_dict(OrderedDict(items)) may be used to preserve the key order.", "  df = pd.DataFrame.from_items(lists)", "      Date     Forecast", "0   201512  3619.920722", "1   201601  1762.940482", "2   201602  4330.275391", "3   201603  3382.537782", "4   201604  2599.650587", "5   201605  4255.471174", "6   201606  4780.092345", "7   201607  3049.845308", "8   201608  3342.365598", "9   201609  3659.456652", "10  201610  3636.917151", "11  201611  3655.255349", "12  201612  3619.920722"],
+					"generated_output": [{
+							"resource_id": "5c52fe83b9d821002e86d338"
+						}
+					]
+				}
+			}, {
+				"step_id": "5c52fa3ab9d821002e86d2db",
+				"args": {
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001",
+					"START_FORECAST_DATE": 201512,
+					"END_FORECAST_DATE": 201612
+				},
+				"step_status": "ERROR",
+				"step_result": {
+					"job_id": "5c52fe83b9d821002e86d33b",
+					"submission_time": 1548942981042,
+					"start_time": 1548942979966,
+					"end_time": 1548942983290,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 30 day(s)", "/usr/lib/python3.6/site-packages/sklearn/ensemble/weight_boosting.py:29: DeprecationWarning: numpy.core.umath_tests is an internal NumPy module and should not be imported. It will be removed in a future NumPy release.", "  from numpy.core.umath_tests import inner1d", "MAPE value is: 45.47802720489336", "saveKpiResult: KPI does not exist for provided name <MAPE> and project <Python Quickstarts>", "Traceback (most recent call last):", "  File \"/tmp/97a98551-c691-433d-9b64-73d5d2c06e4b1131722954794733702/recipe803cd26d-e3db-4935-b05f-cff5b06464c1.py\", line 43, in <module>", "    mm.saveKpiResult(\"MAPE\", \"2016/12/01\", MAPE, \"Machine Learning Forecasting\", \"1\")", "  File \"/usr/lib/python3.6/site-packages/mmlibrary/__init__.py\", line 242, in saveKpiResult", "    raise e", "ValueError: saveKpiResult: KPI does not exist for provided name <MAPE> and project <Python Quickstarts>"]
+				}
+			}, {
+				"step_id": "5c52d605b9d821002e86d223",
+				"args": {
+					"KPI threshold": 60
+				},
+				"step_status": "NOT_EXECUTED",
+				"step_result": null
+			}
+		]
+	}, {
+		"run_id": "5c52f63cb9d821002e86d281",
+		"pipeline_id": "5c52f29db9d821002e86d280",
+		"version_id": "1",
+		"project": "default-project",
+		"submitted_by": "Model Engineer User",
+		"submission_time": 1548940860940,
+		"end_time": 1548940864217,
+		"attributes": [{
+				"model_id": "5c52c80fb9d821002e86d21d",
+				"version_id": "latest",
+				"training_args": {},
+				"training_input_resources": null,
+				"args": {},
+				"input_resources": ["5c52bb62b9d821002e86d16f"]
+			}, {
+				"step_id": "5c52d605b9d821002e86d223",
+				"args": {
+					"KPI threshold": 60
+				},
+				"input_resources": null
+			}, {
+				"model_id": "5c52c80fb9d821002e86d21d",
+				"version_id": "latest",
+				"training_args": {},
+				"training_input_resources": ["5c52bb62b9d821002e86d16f"],
+				"args": {},
+				"input_resources": null
+			}, {
+				"model_id": "5c52e7dfb9d821002e86d27f",
+				"version_id": "1",
+				"training_args": {},
+				"training_input_resources": null,
+				"args": {},
+				"input_resources": ["5c52bb62b9d821002e86d16f"]
+			}
+		],
+		"run_status": "ERROR",
+		"run_results": [{
+				"model_id": "5c52c80fb9d821002e86d21d",
+				"version_id": "2",
+				"args": {
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001",
+					"START_FORECAST_DATE": 201512,
+					"END_FORECAST_DATE": 201612
+				},
+				"training": false,
+				"model_status": "ERROR",
+				"model_result": {
+					"job_id": "5c52f63db9d821002e86d283",
+					"submission_time": 1548940862763,
+					"start_time": 1548940861260,
+					"end_time": 1548940864217,
+					"job_server_instance": "d4f861fd6b63:4567",
+					"environment_id": null,
+					"messages": ["Warning: License is expiring in 30 day(s)", "Traceback (most recent call last):", "  File \"/tmp/0008e7d0-959e-43fd-afe2-0bd954ae7e622023548695017647689/recipefcaeceaa-b38a-4d7b-9c00-46f174dfd0ce.py\", line 8, in <module>", "    from Module import Prediction", "ModuleNotFoundError: No module named 'Module'"]
+				}
+			}, {
+				"step_id": "5c52d9ccb9d821002e86d227",
+				"args": {
+					"SKU": "ETR-gaNMqBBXjxC4TO9qvyjsTId6j-001",
+					"START_FORECAST_DATE": 201512,
+					"END_FORECAST_DATE": 201612
+				},
+				"step_status": "NOT_EXECUTED",
+				"step_result": null
+			}, {
+				"step_id": "5c52d605b9d821002e86d223",
+				"args": {
+					"KPI threshold": 60
+				},
+				"step_status": "NOT_EXECUTED",
+				"step_result": null
+			}
+		]
+	}
+]
